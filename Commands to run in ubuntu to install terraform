@@ -1,0 +1,32 @@
+ssh -i ~/Downloads/s3test.pem ubuntu@IP
+A******************5 --accesskey
+U****************************************p --secret key
+
+apt-get update
+apt-get upgrade
+##clone the S3 URL to create bucket
+git
+git init
+git clone https://github.com/shanthaveeresha/AWS-S3-Terraform.git
+cd /home/ubuntu/AWS-S3-Terraform/
+cd s3
+##to install terraform
+sudo apt install  software-properties-common gnupg2 curl
+curl https://apt.releases.hashicorp.com/gpg | gpg --dearmor > hashicorp.gpg
+sudo install -o root -g root -m 644 hashicorp.gpg /etc/apt/trusted.gpg.d/
+sudo apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com focal main"
+sudo apt update
+sudo apt install terraform
+terraform --version
+## aws-cli and aws configure installation
+apt install awscli
+aws configure
+A******************5 --accesskey
+U****************************************p --secret key
+US-east-1 --region
+json --output
+##run terraform
+terraform init
+terraform plan
+terraform apply
+terraform destroy
